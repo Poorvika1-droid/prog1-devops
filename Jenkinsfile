@@ -1,7 +1,4 @@
 
-Jenkinsfile.txt
-
-100%
 pipeline {
     agent any
 
@@ -16,14 +13,18 @@ pipeline {
         stage('Build & Execute Script') {
             steps {
                 echo 'Running first.py...'
-                bat 'python first.py'
+
+                bat '"C:\\Users\\STUDENT\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" --version'
+
+                bat '"C:\\Users\\STUDENT\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" first.py'
             }
         }
 
         stage('Code Stability Check') {
             steps {
                 echo 'Verifying pipeline execution...'
-                bat 'echo "Python script executed successfully!"'
+
+                bat 'echo Python script executed successfully!'
             }
         }
     }
@@ -32,9 +33,9 @@ pipeline {
         success {
             echo 'SUCCESS: CI Pipeline completed successfully!'
         }
+
         failure {
             echo 'FAILURE: Pipeline failed. Check build logs.'
         }
     }
 }
-Displaying Jenkinsfile.txt.
