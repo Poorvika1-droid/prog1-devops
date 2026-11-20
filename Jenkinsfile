@@ -14,7 +14,7 @@ pipeline {
             steps {
                 echo 'Running first.py...'
 
-                bat '"C:\\Users\\STUDENT\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" --version'
+              
 
                 bat '"C:\\Users\\STUDENT\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" first.py'
             }
