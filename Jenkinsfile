@@ -1,4 +1,3 @@
-
 pipeline {
     agent any
 
@@ -13,9 +12,6 @@ pipeline {
         stage('Build & Execute Script') {
             steps {
                 echo 'Running first.py...'
-
-               
-
                 bat '"C:\\Users\\STUDENT\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" first.py'
             }
         }
@@ -23,7 +19,7 @@ pipeline {
         stage('Code Stability Check') {
             steps {
                 echo 'Verifying pipeline execution...'
-                bat 'echo Python script executed successfully!'
+                bat 'echo "Python script executed successfully!"'
             }
         }
     }
