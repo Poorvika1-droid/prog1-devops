@@ -1,3 +1,7 @@
+
+Jenkinsfile.txt
+
+100%
 pipeline {
     agent any
 
@@ -12,7 +16,7 @@ pipeline {
         stage('Build & Execute Script') {
             steps {
                 echo 'Running first.py...'
-                bat '"C:\\Users\\STUDENT\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" first.py'
+                bat 'python first.py'
             }
         }
 
@@ -33,3 +37,4 @@ pipeline {
         }
     }
 }
+Displaying Jenkinsfile.txt.
